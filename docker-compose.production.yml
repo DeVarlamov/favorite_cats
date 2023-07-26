@@ -20,9 +20,9 @@ services:
   frontend:
     image: devarlamov/kittygram_frontend
     env_file: .env
-    command: cp -r /app/build/. /static/
+    command: cp -r /app/build/. /frontend_static/
     volumes:
-      - static:/static
+      - static:/frontend_static
   gateway:
     image: devarlamov/kittygram_gateway
     env_file: .env
