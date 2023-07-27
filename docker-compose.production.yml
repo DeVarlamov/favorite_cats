@@ -26,6 +26,8 @@ services:
     volumes:
       - static:/frontend_static
   gateway:
+    depends_on:
+    - backend
     image: devarlamov/kittygram_gateway
     env_file: .env
     volumes:
